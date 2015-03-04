@@ -1,0 +1,12 @@
+bind = '{{ gunicorn_bind }}'
+workers = {{ gunicorn_workers }}
+accesslog = '-'
+errorlog = '{{ gunicorn_log }}'
+
+{% if develop or test -%}
+reload = True
+loglevel = 'debug'
+{% else %}
+reload = False
+loglevel = 'info'
+{% endif %}

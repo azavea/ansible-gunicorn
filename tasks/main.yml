@@ -1,0 +1,16 @@
+---
+- name: Install gunicorn
+  pip: name=gunicorn version={{ gunicorn_version }} state=present
+
+- name: Create gunicorn user
+  user: name={{ gunicorn_user }} state=present
+
+- name: Create /etc/gunicorn
+  file: name=/etc/gunicorn state=directory
+
+- name: Install gunicorn config
+  template: src=gunicorn.py.j2 dest=/etc/gunicorn/{{ gunicorn_app_name }}.py
+
+- name: Install upstart script
+  template: src=upstart.conf.j2 dest=/etc/init/{{ gunicorn_app_name }}.conf
+  notify: Restart gunicorn
