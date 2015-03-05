@@ -1,0 +1,4 @@
+---
+- name: Copy Hello World app
+  copy: src=helloworld.wsgi dest={{ gunicorn_app_dir }}/{{ gunicorn_wsgi }}.py
+  notify: Restart gunicorn
