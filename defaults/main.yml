@@ -1,6 +1,5 @@
 ---
-develop: false
-test: false
+gunicorn_start_on_vagrant: false
 gunicorn_version: "19.2.1"
 gunicorn_user: "gunicorn"
 gunicorn_app_name: "gunicorn"

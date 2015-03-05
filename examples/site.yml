@@ -14,4 +14,4 @@
     gunicorn_wsgi: hello_world
     gunicorn_loglevel: "debug"
     gunicorn_reload: true
-    develop: true
+    gunicorn_start_on_vagrant: true
