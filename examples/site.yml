@@ -6,10 +6,12 @@
       apt: update_cache=yes
 
   roles:
-    - { role: "azavea.gunicorn" }
     - { role: "gunicorn.example" }
 
   vars:
     gunicorn_bind: "0.0.0.0:8000"
-    gunicorn_app_dir: /home/gunicorn
+    gunicorn_app_dir: /var/lib/gunicorn
     gunicorn_wsgi: hello_world
+    gunicorn_loglevel: "debug"
+    gunicorn_reload: true
+    develop: true

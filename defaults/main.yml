@@ -5,5 +5,8 @@ gunicorn_version: "19.2.1"
 gunicorn_user: "gunicorn"
 gunicorn_app_name: "gunicorn"
 gunicorn_workers: 8
-gunicorn_log: "/home/gunicorn/gunicorn.log"
+gunicorn_errorlog: "/var/lib/gunicorn/gunicorn.log"
+gunicorn_accesslog: "-"
 gunicorn_bind: "127.0.0.1:8000"
+gunicorn_reload: false
+gunicorn_loglevel: "info"
