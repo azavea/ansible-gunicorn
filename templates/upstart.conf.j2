@@ -1,0 +1,10 @@
+description "Gunicorn upstart script for {{ gunicorn_app_name }}"
+
+start on ({{ gunicorn_start_on }})
+stop on shutdown
+
+respawn
+setuid {{ gunicorn_user }}
+chdir {{ gunicorn_app_dir }}
+
+exec gunicorn --config /etc/gunicorn/{{ gunicorn_app_name }}.py {{ gunicorn_wsgi }}
