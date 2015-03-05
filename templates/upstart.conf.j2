@@ -1,10 +1,6 @@
 description "Gunicorn upstart script for {{ gunicorn_app_name }}"
 
-{% if gunicorn_start_on_vagrant -%}
-start on (vagrant-mounted)
-{% else %}
-start on (local-filesystems and net-device-up IFACE!=lo)
-{% endif %}
+start on ({{ gunicorn_start_on }})
 stop on shutdown
 
 respawn
