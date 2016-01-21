@@ -1,9 +1,10 @@
 ---
 gunicorn_start_on: "local-filesystems and net-device-up IFACE!=lo"
-gunicorn_version: "19.2.1"
+gunicorn_version: "19.4.4"
 gunicorn_user: "gunicorn"
 gunicorn_app_name: "gunicorn"
 gunicorn_workers: 8
+gunicorn_timeout: 30
 gunicorn_errorlog: "/var/lib/gunicorn/gunicorn.log"
 gunicorn_accesslog: "-"
 gunicorn_bind: "127.0.0.1:8000"
