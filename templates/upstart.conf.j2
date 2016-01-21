@@ -7,4 +7,4 @@ respawn
 setuid {{ gunicorn_user }}
 chdir {{ gunicorn_app_dir }}
 
-exec gunicorn --config /etc/gunicorn/{{ gunicorn_app_name }}.py {{ gunicorn_wsgi }}
+exec gunicorn --timeout {{ gunicorn_timeout }} --config /etc/gunicorn/{{ gunicorn_app_name }}.py {{ gunicorn_wsgi }}
