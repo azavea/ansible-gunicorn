@@ -9,3 +9,4 @@ gunicorn_accesslog: "-"
 gunicorn_bind: "127.0.0.1:8000"
 gunicorn_reload: false
 gunicorn_loglevel: "info"
+gunicorn_syslog: true
