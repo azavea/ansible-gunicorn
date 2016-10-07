@@ -10,7 +10,7 @@ An Ansible role for installing and configuring gunicorn. Provides the `Restart g
 - `gunicorn_app_name` - name of app which will be used as the name of the service (default `"gunicorn"`)
 - `gunicorn_workers` - number of workers to pre-fork (default: `8`)
 - `gunicorn_accesslog` - access log file location (default: `"-"`)
-- `gunicorn_errorlog` - error log file location (default: `"/var/lib/gunicorn/gunicorn.log"`)
+- `gunicorn_errorlog` - error log file location (default: `"-"`)
 - `gunicorn_syslog` - send `stdout` and `stderr` output to syslog (default: `true`)
 - `gunicorn_bind` - address and port to bind to (default: `"127.0.0.1:8000"`)
 - `gunicorn_reload` - reload after each request (default: `"false"`)
