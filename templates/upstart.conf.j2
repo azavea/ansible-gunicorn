@@ -7,4 +7,4 @@ respawn
 setuid {{ gunicorn_user }}
 chdir {{ gunicorn_app_dir }}
 
-exec gunicorn --config /etc/gunicorn/{{ gunicorn_app_name }}.py {{ gunicorn_wsgi }}
+exec gunicorn --config /etc/gunicorn/{{ gunicorn_app_name }}.py {{ gunicorn_wsgi }} {% if gunicorn_syslog %} 2>&1 | logger -t {{ gunicorn_app_name }} {% endif %}
