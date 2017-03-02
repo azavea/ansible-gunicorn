@@ -14,4 +14,6 @@
     gunicorn_wsgi: hello_world
     gunicorn_loglevel: "debug"
     gunicorn_reload: true
+    gunicorn_accesslog: False
+    gunicorn_errorlog: "-"
     gunicorn_start_on: "vagrant-mounted"
