@@ -7,6 +7,6 @@ gunicorn_workers: 8
 gunicorn_errorlog: "-"
 gunicorn_accesslog: "-"
 gunicorn_bind: "127.0.0.1:8000"
-gunicorn_reload: false
+gunicorn_reload: False
 gunicorn_loglevel: "info"
-gunicorn_syslog: true
+gunicorn_syslog: True
