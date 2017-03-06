@@ -1,3 +1,7 @@
+## 1.0.1
+
+- Add support for setting `gunicorn_accesslog` and `gunicorn_errorlog` to `None`.
+
 ## 1.0.0
 
 - Add `gunicorn_syslog` parameter to enable sending `stdout` and `stderr`
