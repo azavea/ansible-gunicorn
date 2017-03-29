@@ -1,3 +1,8 @@
+## 1.1.0
+
+- Add `gunicorn_dynamic_workers` parameter to dynamically increase the number of workers with the number of CPUs.
+- Add `gunicorn_cpu_coefficient` parameter to increase the amount of workers per CPU when `gunicorn_dynamic_workers` is `True`.
+
 ## 1.0.1
 
 - Add support for setting `gunicorn_accesslog` and `gunicorn_errorlog` to `None`.
