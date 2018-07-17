@@ -1,3 +1,7 @@
+## 1.2.0
+
+- Add `systemd` Unit when `systemd` is the default OS service manager.
+
 ## 1.1.0
 
 - Add `gunicorn_dynamic_workers` parameter to dynamically increase the number of workers with the number of CPUs.
