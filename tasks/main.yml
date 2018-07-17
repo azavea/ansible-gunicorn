@@ -16,6 +16,14 @@
   template: src=gunicorn.py.j2 dest=/etc/gunicorn/{{ gunicorn_app_name }}.py
   notify: Restart gunicorn
 
-- name: Install upstart script
+- name: Install Upstart service configuration
   template: src=upstart.conf.j2 dest=/etc/init/{{ gunicorn_app_name }}.conf
   notify: Restart gunicorn
+  when: ansible_service_mgr == "upstart"
+
+- name: Install systemd service configuration 
+  template: src=systemd.conf.j2
+            dest=/etc/systemd/system/{{ gunicorn_app_name }}.service
+            mode="0755"
+  notify: Restart gunicorn
+  when: ansible_service_mgr == "systemd"

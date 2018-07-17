@@ -9,6 +9,7 @@
     - { role: "gunicorn.example" }
 
   vars:
+    pip_version: "9.0.*"
     gunicorn_bind: "0.0.0.0:8000"
     gunicorn_app_dir: /var/lib/gunicorn
     gunicorn_wsgi: hello_world
