@@ -22,4 +22,4 @@ SyslogIdentifier={{ gunicorn_app_name }}
 {% endif %}
 
 [Install]
-WantedBy = multi-user.target
+WantedBy = {{ gunicorn_start_on }}
