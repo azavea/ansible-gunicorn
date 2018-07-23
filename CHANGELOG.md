@@ -1,3 +1,7 @@
+## 1.2.2
+
+- Fix service suffix when using `systemd` to append `.service`.
+
 ## 1.2.1
 
 - Fix threading through of `gunicorn_start_on` to `systemd` unit `WantedBy`.
