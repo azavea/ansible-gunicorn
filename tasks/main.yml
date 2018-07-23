@@ -29,4 +29,5 @@
   when: ansible_service_mgr == "systemd"
 
 - name: Enable gunicorn service
-  service: name={{ gunicorn_app_name }} enabled=yes
+  service: name="{{ gunicorn_app_name }}{{ (ansible_service_mgr == 'systemd') | ternary('.service', '') }}"
+           enabled=yes
