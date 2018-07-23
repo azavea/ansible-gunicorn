@@ -1,3 +1,7 @@
+## 1.2.1
+
+- Fix threading through of `gunicorn_start_on` to `systemd` unit `WantedBy`.
+
 ## 1.2.0
 
 - Add `systemd` Unit when `systemd` is the default OS service manager.

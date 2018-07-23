@@ -4,7 +4,7 @@ An Ansible role for installing and configuring gunicorn. Provides the `Restart g
 
 ## Role Variables
 
-- `gunicorn_start_on` - start on string for upstart (default: `"local-filesystems and net-device-up IFACE!=lo"`)
+- `gunicorn_start_on` - start on string for Upstart, or `systemd` `WantedBy` (default: `"local-filesystems and net-device-up IFACE!=lo"`)
 - `gunicorn_version` - version of gunicorn to install (default: `"19.2.1"`)
 - `gunicorn_user` - user to run gunicorn as. will create if doesn't exist. (default: `"gunicorn"`)
 - `gunicorn_app_name` - name of app which will be used as the name of the service (default `"gunicorn"`)

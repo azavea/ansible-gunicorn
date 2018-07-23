@@ -27,3 +27,6 @@
             mode="0755"
   notify: Restart gunicorn
   when: ansible_service_mgr == "systemd"
+
+- name: Enable gunicorn service
+  service: name={{ gunicorn_app_name }} enabled=yes
