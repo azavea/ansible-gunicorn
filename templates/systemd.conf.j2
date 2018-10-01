@@ -14,7 +14,9 @@ ExecStart = /usr/bin/env gunicorn --pid /run/{{ gunicorn_app_name }}/{{ gunicorn
 ExecReload = /bin/kill -s HUP $MAINPID
 ExecStop = /bin/kill -s TERM $MAINPID
 ExecStopPost = /bin/rm -rf /run/{{ gunicorn_app_name }}
+{% if gunicorn_private_tmp -%}
 PrivateTmp = true
+{% endif %}
 {% if gunicorn_syslog -%}
 StandardOutput=syslog
 StandardError=syslog
