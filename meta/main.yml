@@ -1,16 +1,19 @@
 ---
+
 galaxy_info:
   author: Sharp Hall
   description: An Ansible role for installing and configuring gunicorn.
   company: Azavea Inc.
   license: Apache
-  min_ansible_version: 1.2
+  min_ansible_version: 2.2
   platforms:
   - name: Ubuntu
     versions:
+    - xenial
     - trusty
     - precise
   categories:
   - development
+
 dependencies:
   - { role: "azavea.pip" }

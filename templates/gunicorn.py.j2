@@ -4,6 +4,7 @@ workers = ({{ gunicorn_cpu_coefficient }} * multiprocessing.cpu_count()) + 1
 {% else %}
 workers = {{ gunicorn_workers }}
 {% endif %}
+timeout = {{ gunicorn_timeout }}
 bind = '{{ gunicorn_bind }}'
 accesslog = {% if gunicorn_accesslog %}'{{ gunicorn_accesslog }}'{% else %}None{% endif %}
 
