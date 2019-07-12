@@ -21,7 +21,7 @@
   notify: Restart gunicorn
   when: ansible_service_mgr == "upstart"
 
-- name: Install systemd service configuration 
+- name: Install systemd service configuration
   template: src=systemd.conf.j2
             dest=/etc/systemd/system/{{ gunicorn_app_name }}.service
             mode="0755"

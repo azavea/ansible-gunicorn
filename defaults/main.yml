@@ -11,4 +11,6 @@ gunicorn_accesslog: "-"
 gunicorn_bind: "127.0.0.1:8000"
 gunicorn_reload: False
 gunicorn_loglevel: "info"
+gunicorn_private_tmp: True
 gunicorn_syslog: True
+gunicorn_timeout: 30

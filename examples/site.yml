@@ -17,4 +17,4 @@
     gunicorn_accesslog: False
     gunicorn_errorlog: "-"
     gunicorn_reload: True
-    gunicorn_start_on: "vagrant-mounted"
+    gunicorn_start_on: "{{ 'vagrant.mount' if ansible_service_mgr == 'systemd' else 'vagrant-mounted' }}"
