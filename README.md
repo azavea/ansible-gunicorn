@@ -19,6 +19,7 @@ An Ansible role for installing and configuring gunicorn. Provides the `Restart g
 - `gunicorn_loglevel` - log level (default: `"info"`)
 - `gunicorn_app_dir` - where to chdir into before loading app (*required*)
 - `gunicorn_wsgi` - module to import containing application (*required*)
+- `gunicorn_timeout` - Workers silent for more than this many seconds are killed and restarted. (default: `30`).
 
 ## Example Playbook
 

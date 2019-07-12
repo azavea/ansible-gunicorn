@@ -13,3 +13,4 @@ gunicorn_reload: False
 gunicorn_loglevel: "info"
 gunicorn_private_tmp: True
 gunicorn_syslog: True
+gunicorn_timeout: 30

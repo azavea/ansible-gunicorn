@@ -1,3 +1,7 @@
+## 1.3.0
+
+- Add parameter `gunicorn_timeout` for configuring the timeout.
+
 ## 1.2.2
 
 - Fix service suffix when using `systemd` to append `.service`.
